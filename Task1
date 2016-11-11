@@ -1,0 +1,26 @@
+#include <iostream>
+#include<stdlib.h>
+#include<math.h>
+
+using namespace std;
+
+int main(){
+    int i;
+    cin>>i;
+    int *p=new int(i);
+    double *a=new double;
+    *a=pow(10.,-*p);
+   cout<<"Коэффициент"<<*a<<endl;
+    double res=0;
+    int b;
+    cin>>b;
+    cout<<"Проводим операцию до числа "<<b<<endl;
+    int num=1;
+    while(res<b){
+        res+=*a*num;
+    num++;
+    }
+    cout<<"Количество шагов:"<<num<<endl;
+    cout<<"Конечный результат:"<<res;
+    return 0;
+}
