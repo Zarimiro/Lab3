@@ -22,5 +22,6 @@ int main(){
     }
     cout<<"Количество шагов:"<<num<<endl;
     cout<<"Конечный результат:"<<res;
+    delete p;
     return 0;
 }
