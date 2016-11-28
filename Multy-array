@@ -1,0 +1,37 @@
+#include <iostream>
+#include<stdlib.h>
+#include<time.h>
+#include<conio.h>
+
+using namespace std;
+
+int main() {
+	int n, m;
+	cin >> n >> m;
+	cout << "\nNumber of lines:" << n << endl << "Number of columns:" << m << endl;
+	int **p = new int*[n];
+	srand(time(0));
+	for (int i = 0; i < n; i++) {
+		p[i] = new int[m];
+		for (int j = 0; j < m; j++) {
+			p[i][j] = rand() % 50;
+			cout << p[i][j] << "\t";
+		}
+		cout << endl;
+	}
+	cout << endl;
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+			p[i][j] = p[j][i];
+			cout << p[j][i] << "\t";
+		}
+		cout << endl;
+	}
+	for (int i = 0; i < n; i++) {
+		delete[]p[i];
+	}
+	delete[] p;
+	_getch();
+
+	return 0;
+}
