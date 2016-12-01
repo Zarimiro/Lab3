@@ -20,13 +20,19 @@ int main() {
 		cout << endl;
 	}
 	cout << endl;
+	double midnum=0.;
 	for (int i = 0; i < n; i++) {
+		int buf=0;
 		for (int j = 0; j < m; j++) {
-			p[i][j] = p[j][i];
-			cout << p[j][i] << "\t";
+			buf += p[i][j];
 		}
-		cout << endl;
+		buf /= m;
+		midnum += buf;
 	}
+	midnum /=(double) m;
+	cout << "\nThe middle ariphmetical of middle ariphmeticals of lines is:"<<midnum;
+	
+
 	for (int i = 0; i < n; i++) {
 		delete[]p[i];
 	}
