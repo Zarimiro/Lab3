@@ -5,25 +5,25 @@
 
 using namespace std;
 
-int main(){
-    int i;
-    cin>>i;
-    int *p=new int(i);
-    double *a=new double;
-    *a=pow(10.,-*p);
-   cout<<"Коэффициент"<<*a<<endl;
-    double res=0;
-    int b;
-    cin>>b;
-    cout<<"Проводим операцию до числа "<<b<<endl;
-    int num=1;
-    while(res<b){
-        res+=*a*num;
-    num++;
-    }
-    cout<<"Количество шагов:"<<num<<endl;
-    cout<<"Конечный результат:"<<res;
-    delete p;
-    return 0;
-    _getch();
+int main() {
+	int i;
+	cin >> i;
+	int *p = new int(i);
+	double *a = new double;
+	*a = pow(10., -*p);
+	cout << "Coefficient:" << *a << endl;
+	double res = 0;
+	int b;
+	cin >> b;
+	cout << "Operationing till: " << b << endl;
+	int num = 1;
+	while (res<b) {
+		res += *a*num;
+		num++;
+	}
+	cout << "Amount of steps taken:" << num << endl;
+	cout << "Final result:" << res;
+	delete p;
+	_getch();
+	return 0;
 }
