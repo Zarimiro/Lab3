@@ -21,7 +21,7 @@ int main() {
 		res += *a*num;
 		num++;
 	}
-	cout << "Amount of steps taken:" << num << endl;
+	cout << "Amount of steps taken:" << num-1 << endl;
 	cout << "Final result:" << res;
 	delete p;
 	_getch();
