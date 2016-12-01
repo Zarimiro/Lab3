@@ -1,6 +1,7 @@
 #include <iostream>
 #include<stdlib.h>
 #include<math.h>
+#include<conio.h>
 
 using namespace std;
 
@@ -24,4 +25,5 @@ int main(){
     cout<<"Конечный результат:"<<res;
     delete p;
     return 0;
+    _getch();
 }
